@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0;
+    word-spacing: 2px;
+    line-height: 25px;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2 {
+    font-size: 34px;
+    font-style: bold;
+    line-height: 34px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+/* main colors */
+
+.sidebar {
+    background-color: #ACC18A;
+    color: #605B56;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+}
+.sidebar h2 {
+    text-align: center;
+}
+.sidebar * {
+    padding: 8px;
+}
+
+.about-portfolio {
+    background-color: #F2FBE0;
+    color: #837A75;
+    padding: 1rem;
+}
+.about-portfolio * {
+    padding: 8px;
+}
+
+
+.projects-wrapper {
+    background-color: #E6FDCC;
+    color: #726B66;
+    padding: 1rem;
+}
+.projects-wrapper h2 {
+    font-size: 45px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.project {
+    padding: 1rem;
+    background-color: #D5F7B2;
+    margin: 20px;
+}
+.project *:not(img) {
+    padding: 10px;
+}
+.project img {
+    width: 100%;
+    height: minmax(auto, 300px);
+}
+
+.footer {
+    background-color: #989E80;
+    color: #F2FBE0;
+    color: #B8D196;
+    padding: 10px;
+}
+.footer p{
+    font-size: 16px;
+    text-align: right;
+    padding-right: 20px;
+}
+.main h2{
+    text-align: center;
+}
+
+
+/* responsiveness */
+.wrapper {
+    display: flex;
+}
+
+@media only screen and (max-width: 700px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 701px) {
+    .wrapper {
+        flex-direction: row;
+    }
+
+    .main {
+        width: 70vw;
+    }
+    
+    .sidebar-wrapper {
+        width: 30vw;
+        height: 100vh;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 30vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .project {
+        flex: 1 1 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
